@@ -1,6 +1,6 @@
 # BALONDO, JAYMART T.
 # ITELECT2
-# Laboratory #20 - Guided Coding Exercise:
+# Laboratory #22 - Guided Coding Exercise:
 # Variables, Literals, and Case-Sensitivity in Python 
 
 def display_menu():
@@ -9,7 +9,7 @@ def display_menu():
     print("2. Check Even/Odd")
     print("3. Exit")
     print("Enter your choice (1-3): ", end='')
-
+    
 def handle_menu_choice(choice: int) -> bool:
     if choice == 1:
         greet_user()
@@ -20,7 +20,7 @@ def handle_menu_choice(choice: int) -> bool:
         return True
     else:
         print("Invald choice. Please enter a number between 1 and 3.")
-        return False
+    return False
 
 def greet_user():
     print("Hello! Welcome!")
@@ -43,7 +43,7 @@ def main():
     while True:
         display_menu()
         try:
-            choice = int(input("Enter your choice (1-3): "))
+            choice = int(input())
             if handle_menu_choice(choice):
                 break
         except ValueError:
